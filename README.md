@@ -5,6 +5,13 @@ Repositori ini berisi kode, konfigurasi, serta analisis hasil simulasi berbagai 
 
 ---
 
+## Struktur Branch
+Repositori ini memiliki dua branch utama:
+- **main** → hanya berisi kode mentah tanpa hasil simulasi.
+- **result** → berisi keseluruhan hasil simulasi yang telah dijalankan (output `.csv`, grafik `.png`, dan hasil uji statistik).
+
+---
+
 ## 🚀 Fitur Utama
 - Implementasi **ABM** berbasis `mesa`.
 - Integrasi **Monte Carlo Simulation** untuk uji ketahanan sistem.
