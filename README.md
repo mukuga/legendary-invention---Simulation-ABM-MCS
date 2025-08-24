@@ -121,3 +121,9 @@ Contoh hasil visualisasi:
 Proyek ini dilisensikan di bawah **MIT License** – silakan lihat file [LICENSE](LICENSE) untuk detail.
 
 ---
+
+## 🙌 Kontribusi
+Pull request, issue, atau diskusi pengembangan sangat terbuka.  
+Silakan fork repositori ini dan ajukan kontribusi melalui PR.
+
+---
