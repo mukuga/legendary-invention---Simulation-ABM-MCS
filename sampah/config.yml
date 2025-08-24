@@ -1,0 +1,50 @@
+seed: 42
+steps: 1000
+n_iterations: 1000
+n_processes: 4
+panic_threshold: 0.95
+market_params:
+  mu: 0.0
+  sigma: 0.02
+  jump_prob: 0.02
+  jump_size:
+  - -0.15
+  - -0.08
+  shock_schedule: {}
+agents:
+- class: BankAgent
+  id: 1
+  params:
+    capital: 1000000000000
+    crypto_exposure: 20000000000.0
+    interest_rate: 0.0916
+- class: BorrowerAgent
+  id: 10
+  params:
+    risk_tolerance: 0.6
+    loan_demand: 25000000
+    default_prob: 0.0252
+- class: ArbitrageurAgent
+  id: 20
+  params:
+    capital: 500000
+- class: CEXAgent
+  id: 30
+  params:
+    reserve: 100000000
+- class: RegulatorAgent
+  id: 40
+  params:
+    liquidity_buffer: 200000000
+scenarios:
+  active: true
+  description: Baseline scenario tanpa guncangan atau intervensi. Digunakan sebagai
+    pembanding.
+  depeg:
+    active: false
+  panic_selling:
+    active: false
+  cex_intervention:
+    active: false
+  imf_intervention:
+    active: false

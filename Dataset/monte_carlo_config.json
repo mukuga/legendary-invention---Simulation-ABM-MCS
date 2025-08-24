@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "version": "2025‑07‑22",
+    "note": "Semua distribusi berbasis langkah‐model (1 step ≈ 1 hari). Nilai berpola asumsi ditandai jelas."
+  },
+
+  "run_config": {
+    "n_iterations": 1000,
+    "steps_per_iteration": 1000,
+    "n_processes": 4,
+    "random_seed": 42,
+    "output_directory": "results/",
+    "save_format": "csv"
+  },
+
+  "stochastic_parameters": {
+    "panic_selling_probability": {
+      "distribution": "beta",
+      "alpha": 2.5,
+      "beta": 5,
+      "range": [0.10, 0.70],
+      "description": "Probabilitas borrower menjual panik saat peg < threshold; bentuk right‑skew gebaseerd UST case.",
+      "source": "Chainalysis blog post on TerraUSD collapse (2022); no direct numeric estimate.",
+      "is_assumed": true
+    },
+    "default_probability_shock_multiplier": {
+      "distribution": "uniform",
+      "range": [1.0, 5.0],
+      "description": "Pengganda NPL saat krisis; skenario sensitivitas.",
+      "source": "Scenario assumption; no public IMF paper found.",
+      "is_assumed": true
+    },
+    "shock_injection_magnitude": {
+      "distribution": "triangular",
+      "min": 0.05,
+      "mode": 0.10,
+      "max": 0.20,
+      "description": "Magnitudo de‑peg price shock (USDC 13 % peak; DAI <5 %; excludes Terra‑like 90 % crash).",
+      "source": "CoinMetrics tick data & BIS Bulletin 69 (USDC) – empirically adjacent, but treated as scenario.",
+      "is_assumed": true
+    },
+    "stablecoin_jump_frequency": {
+      "distribution": "poisson",
+      "lambda": 0.01,
+      "unit": "per_step",
+      "description": "Jump count per model‑day calibrated from CoinMetrics price series 2020–2023 (≈ 3 events/yr).",
+      "source": "CoinMetrics candle data & Kaiko ‘Defining Depegs’ jump count appendix.",
+      "is_assumed": true
+    },
+    "regulator_trigger_threshold": {
+      "distribution": "normal",
+      "mean": 0.20,
+      "std_dev": 0.05,
+      "description": "Rasio gagal bayar sistemik yang memicu bailout – purely scenario.",
+      "source": "IMF crisis‑intervention literature (qualitative).",
+      "is_assumed": true
+    }
+  },
+
+  "sensitivity_targets": [
+    "default_rate",
+    "stablecoin_price",
+    "recovery_time",
+    "cex_reserve",
+    "illiquid_banks",
+    "liquidity_buffer_usage"
+  ]
+}

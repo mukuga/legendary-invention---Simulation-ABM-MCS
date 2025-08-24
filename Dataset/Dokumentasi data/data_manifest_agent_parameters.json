@@ -1,0 +1,62 @@
+{
+  "SPI_OJK_Des2024.pdf": {
+    "title": "Statistik Perbankan Indonesia Desember 2024",
+    "source_url": "https://ojk.go.id/id/kanal/perbankan/data-dan-statistik/statistik-perbankan-indonesia/Pages/Statistik-Perbankan-Indonesia---Desember-2024.aspx",
+    "description": "Digunakan untuk mengambil batas modal minimum KBMI-1 (~1 triliun IDR) sebagai parameter awal BankAgent.",
+    "relevance": "BankAgent.initial_capital"
+  },
+  "BI_Rilis_SBDK_Q2_2025.pdf": {
+    "title": "Rerata Suku Bunga Dasar Kredit Kuartal II 2025",
+    "source_url": "https://www.bi.go.id/id/publikasi/ruang-media/news-release/Pages/sp_2715325.aspx",
+    "description": "Sumber suku bunga pinjaman bank rata-rata nasional Indonesia (9,16%) untuk parameter interest_rate.",
+    "relevance": "BankAgent.interest_rate"
+  },
+  "WorldBank_MSME_Microcredit_Indonesia_2024.pdf": {
+    "title": "The Impact of Microfinance on the Income of MSMEs in Indonesia (2024)",
+    "source_url": "https://www.researchgate.net/publication/389751914_The_Impact_of_Microfinance_on_the_Income_of_Micro_Small_and_Medium_Enterprises_MSE_in_Indonesia_A_Sectoral_Analysis",
+    "description": "Digunakan untuk menentukan kisaran permintaan pinjaman borrower dalam konteks Indonesia (Rp 1–50 juta).",
+    "relevance": "BorrowerAgent.loan_demand_range"
+  },
+  "BI_SiaranPers_KSSK_2023_NPL.pdf": {
+    "title": "Siaran Pers KSSK – Stabilitas Sistem Keuangan 2023",
+    "source_url": "https://www.bi.go.id/id/publikasi/ruang-media/news-release/Documents/Siaran-Pers-Nomor-3-KSSK-Pers-2023.pdf",
+    "description": "Data NPL gross ritel sebesar 2,52% digunakan untuk default_probability borrower.",
+    "relevance": "BorrowerAgent.default_probability"
+  },
+  "Kaiko_DefiningDepegs_2024.pdf": {
+    "title": "Defining Depegs: A New Metric for Stablecoin Stability",
+    "source_url": "https://research.kaiko.com/insights/defining-depegs-a-new-metric-for-stablecoin-stability",
+    "description": "Digunakan untuk menetapkan ambang spread arbitrase sebesar 3% dalam reaksi ArbitrageurAgent.",
+    "relevance": "ArbitrageurAgent.reaction_threshold"
+  },
+  "ECB_StablecoinLiquidity_2023.pdf": {
+    "title": "Stablecoin Runs and Arbitrage Liquidity (ECB Presentation)",
+    "source_url": "https://www.ecb.europa.eu/press/conferences/shared/pdf/20231109_money_markets/Ma_presentation.lv.pdf",
+    "description": "Slide pendukung tentang threshold arbitrase dan kerentanan stablecoin.",
+    "relevance": "ArbitrageurAgent.reaction_threshold"
+  },
+  "IMF_WP_2023_214_CryptoMacroRisk.pdf": {
+    "title": "Macrofinancial Risks from Crypto Assets",
+    "source_url": "https://www.imf.org/-/media/Files/Publications/WP/2023/English/wpiea2023214-print-pdf.ashx",
+    "description": "Referensi pendekatan intervensi sistemik berbasis cadangan regulator dan CEX.",
+    "relevance": "CEXAgent, RegulatorAgent"
+  },
+  "FSB_CryptoRegulation_2023.pdf": {
+    "title": "FSB High-Level Recommendations for Crypto-Asset Regulation",
+    "source_url": "https://www.fsb.org/uploads/P170723-2.pdf",
+    "description": "Digunakan sebagai basis estimasi eksposur crypto dan prinsip makroprudensial.",
+    "relevance": "BankAgent.crypto_exposure_ratio"
+  },
+  "BIS_Bulletin66_CryptoRiskOptions.pdf": {
+    "title": "Addressing the Risks in Crypto: Options (BIS Bulletin No. 66)",
+    "source_url": "https://www.bis.org/publ/bisbull66.pdf",
+    "description": "Panduan eksplisit untuk respons regulator dan skema intervensi saat krisis DeFi.",
+    "relevance": "RegulatorAgent.liquidity_buffer"
+  },
+  "BoE_FinStability_Crypto_DeFi_2022.pdf": {
+    "title": "Financial Stability in Focus: Cryptoassets and DeFi",
+    "source_url": "https://www.bankofengland.co.uk/financial-stability-in-focus/2022/march-2022",
+    "description": "Dokumen kebijakan BoE sebagai dukungan pendekatan IMF-style crisis modelling.",
+    "relevance": "RegulatorAgent.intervention_magnitude"
+  }
+}

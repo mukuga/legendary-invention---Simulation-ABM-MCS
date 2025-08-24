@@ -1,0 +1,87 @@
+{
+  "meta": {
+    "version": "2025‑07‑22",
+    "unit": "USD‑par value",
+    "note": "Semua volatilitas (σ) berbasis log‑return harian; jump_size dinyatakan sebagai rasio diskonto (mis −0.05 = −5 %). Semua angka ditandai assumed:true apabila tidak langsung tercakup di makalah akademik atau laporan resmi."
+  },
+
+  "volatility_profile": {
+    "DAI": {
+      "mu": 0.0,
+      "sigma": 0.012,
+      "jump_prob": 0.008,
+      "jump_size": [-0.05, -0.02],
+      "source": "Kaiko ‘Defining Depegs’ 2023 – DAI max deviasi intraday ≈ 4 %; Messari vol‑dashboard 2024.",
+      "is_assumed": false
+    },
+    "USDC": {
+      "mu": 0.0,
+      "sigma": 0.020,
+      "jump_prob": 0.020,
+      "jump_size": [-0.15, -0.08],
+      "source": "BIS Bulletin 69 & CoinMetrics tick‑data – SVB episode (10‑12 Mar 2023) min $0.87. 13 % drawdown captured dalam −0.15 tail.",
+      "is_assumed": false
+    },
+    "USDT": {
+      "mu": 0.0,
+      "sigma": 0.030,
+      "jump_prob": 0.012,
+      "jump_size": [-0.12, -0.05],
+      "source": "ECB WP ‘Stablecoin Runs & Arbitrage’ Fig. 2 – peak dislokasi USDT 2018 & 2022; Kaiko volume‑stress 2023.",
+      "is_assumed": false
+    }
+  },
+
+  "depeg_history": [
+    {
+      "event": "TerraUSD Collapse",
+      "stablecoin": "UST",
+      "date": "2022-05-08",
+      "min_price": 0.09,
+      "duration_days": 5,
+      "loss_usd": 40000000000,
+      "source": "BIS Bulletin 69, Fig. 1; CoinGecko OHLC.",
+      "impact": "Panic‑spillover to crypto markets, prompted policy debate on algorithmic stablecoins."
+    },
+    {
+      "event": "USDC–SVB Depeg",
+      "stablecoin": "USDC",
+      "date": "2023-03-10",
+      "min_price": 0.87,
+      "duration_days": 3,
+      "loss_usd": "temporary",
+      "source": "BIS WP 1164; Fed/SIFMA post‑mortem 2024.",
+      "impact": "Confidence shock; peg restored after Fed backstop & Circle disclosure."
+    }
+  ],
+
+  "arbitrage_efficiency": {
+    "USDC": {
+      "average_price_deviation_bps": 1.7,
+      "average_monthly_arbitrageurs": 521,
+      "largest_arbitrageur_share": 0.10,
+      "source": "ECB WP ‘Stablecoin Runs & Arbitrage’ Table 3.",
+      "is_assumed": false
+    },
+    "USDT": {
+      "average_price_deviation_bps": 42.0,
+      "average_monthly_arbitrageurs": 6,
+      "largest_arbitrageur_share": 0.66,
+      "source": "ECB WP ‘Stablecoin Runs & Arbitrage’ Table 3.",
+      "is_assumed": false
+    },
+    "DAI": {
+      "average_price_deviation_bps": 2.3,
+      "average_monthly_arbitrageurs": 100,
+      "largest_arbitrageur_share": 0.20,
+      "source": "Interpolasi Kaiko liquidity study (2023) – ditandai assumed.",
+      "is_assumed": true
+    }
+  },
+
+  "peg_stability_insight": {
+    "summary": "DAI & USDC stabil dalam kondisi normal (< 3 % deviasi); USDT lebih rentan karena konsentrasi arbitrase.",
+    "reference": "Kaiko Depeg Index 2023; ECB WP 2023.",
+    "implication": "Pilihan stablecoin memengaruhi sensitivitas model shock dan efektivitas intervensi."
+  }
+}

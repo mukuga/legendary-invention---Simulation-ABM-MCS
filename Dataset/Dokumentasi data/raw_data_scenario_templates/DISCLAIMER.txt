@@ -1,0 +1,5 @@
+Data tidak sepenuhnya tersedia dalam bentuk file. 
+
+Silakan kunjungi file berikut untuk mengakses beberapa data melalui tautan: 
+
+(data_manifest_scenario_templates.json)

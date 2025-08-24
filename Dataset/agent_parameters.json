@@ -1,0 +1,132 @@
+{
+  "meta": {
+    "version": "2025‑07‑22",
+    "currency": "IDR",
+    "notes": "Monetary values in nominal rupiah; where the ABM needs a down‑scaled micro scenario, use the multiplier in the YAML config instead of altering these base figures."
+  },
+
+  "bank": {
+    "initial_capital": {
+      "indonesia": {
+        "value": 1000000000000,
+        "unit": "IDR",
+        "scale_note": "Lower bound of KBMI‑1 core‑capital threshold; adjust via config‑scaling for micro runs.",
+        "source": "POJK 12/03/2021 §6 – KBMI‑1 ≤ Rp 6 trn; OJK Banking Statistics Dec 2024.",
+        "is_assumed": false
+      },
+      "united_states": {
+        "value": 150000000,            
+        "unit": "USD",
+        "scale_note": "Representatif bank komunitas (assets < US$1.6 bn, CRA 2025).",
+        "source": "FDIC CRA asset-size threshold for small banks US$1.609 bn; assume 9–10 % leverage → ≈US$150 m Tier-1 capital.",
+        "is_assumed": true
+      },
+      "eurozone": {
+        "value": 120000000,            
+        "unit": "EUR",
+        "scale_note": "Bank menengah UE; aset ± €1 mld dengan CET1 ≈ 12 %.",
+        "source": "EBA (Mar 2025) CET1 ≈ 16  %; size proxy €1 bn × 12 % → €120 m.",
+        "is_assumed": true
+      }
+    },
+    "crypto_exposure_ratio": {
+      "value": 0.02,
+      "description": "Estimated share of total assets linked to stable‑coins.",
+      "source": "FSB (2023) ‘High‑level Recommendations …’, Annex B – supervisory survey ranges.",
+      "is_assumed": true
+    },
+    "interest_rate": {
+      "indonesia": {
+        "value": 0.0916,
+        "unit": "decimal",
+        "source": "BI Press‑release No. 27/153/DKom (18 Jul 2025) – avg. bank lending rate 9.16 %.",
+        "is_assumed": false
+      },
+      "united_states": {
+        "value": 0.075,                
+        "unit": "decimal",
+        "source": "Federal Reserve ‘Bank Prime Loan Rate’ (MPRIME) – Jun 2025 7.50 %.",        
+        "is_assumed": false
+      },
+      "eurozone": {
+        "value": 0.0365,               
+        "unit": "decimal",
+        "source": "ECB press release ‘Composite cost-of-borrowing’ May 2025 3.65 %.",          
+        "is_assumed": false
+      }
+    }
+  },
+
+  "borrower": {
+    "loan_demand_range": {
+      "value": [1000000, 50000000],
+      "unit": "IDR",
+      "source": "World Bank (2024) Micro‑loan Survey Indonesia, Fig. 2.",
+      "is_assumed": false
+    },
+    "risk_tolerance_distribution": {
+      "distribution": "uniform",
+      "min": 0.3,
+      "max": 0.9,
+      "source": "Behavioural assumption calibrated to DeFi user variance (Gudgeon et al., 2020).",
+      "is_assumed": true
+    },
+    "default_probability": {
+      "base": 0.0252,
+      "shock_multiplier_range": [1.0, 5.0],
+      "source": "BI Financial Stability Briefing – NPL retail 2.52 % (May 2023).",
+      "is_assumed": false
+    }
+  },
+
+  "arbitrageur": {
+    "initial_capital": {
+      "value": 500000,
+      "unit": "IDR",
+      "source": "Stress‑test assumption; institutional bots typically ≥ US$100 k.",
+      "is_assumed": true
+    },
+    "reaction_threshold": {
+      "value": 0.03,
+      "description": "Minimum peg deviation triggering arbitrage.",
+      "source": "Kaiko ‘Defining Depegs’ (2024) & ECB stable‑coin liquidity slides.",
+      "is_assumed": false
+    },
+    "profit_fraction_per_trade": {
+      "value": 0.5,
+      "description": "Share of capital deployed per trade (extreme‑case).",
+      "source": "WunderTrading blog – synthetic scenario.",
+      "is_assumed": true
+    }
+  },
+
+  "cex": {
+    "initial_reserve": {
+      "value": 100000000,
+      "unit": "IDR",
+      "source": "Model assumption – sized to absorb ~10 % de‑peg.",
+      "is_assumed": true
+    },
+    "intervention_magnitude": {
+      "value": 0.25,
+      "description": "Share of reserve injected when peg breaks.",
+      "source": "Calibrated to Binance USDC support (Mar 2023).",
+      "is_assumed": true
+    }
+  },
+
+  "regulator": {
+    "liquidity_buffer": {
+      "value": 200000000,
+      "unit": "IDR",
+      "source": "IMF macro‑financial stress‑test templates (20 % systemic exposure).",
+      "is_assumed": true
+    },
+    "intervention_magnitude": {
+      "value": 0.2,
+      "description": "Portion of buffer used per bailout round.",
+      "source": "IMF crisis‑simulation tiered approach.",
+      "is_assumed": true
+    }
+  }
+}

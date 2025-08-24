@@ -1,0 +1,26 @@
+project-root/
+├─ Dataset/
+├─ config.yml
+├─ agents.py
+├─ config.py
+├─ market.py
+├─ model.py
+├─ scenarios.py
+├─ param_loader_2.py
+├─ visualisasi.py
+├─ run.py
+├─ run-all.ps1
+├─ results/            # CSV hasil simulasi (per skenario, per iterasi)
+├─ figures/            # PNG/PDF grafik (termasuk Gbr 4.15–4.16, Gbr 5.1)
+├─ requirements.txt    # spesifikasi pip
+├─ README.md           # panduan eksekusi & replikasi
+└─ LICENSE             # lisensi (mis. MIT)
+
+{
+  "global_seed": 20250720,
+  "per_iter_seed": true,
+  "stochastic": {
+    "stablecoin_jump_frequency": {"dist": "poisson", "lambda": 0.1},
+    "default_probability_shock_multiplier": {"dist": "beta", "a": 2, "b": 5}
+  }
+}

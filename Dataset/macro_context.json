@@ -1,0 +1,117 @@
+{
+  "meta": {
+    "version": "2025‑07‑22",
+    "note": "Semua angka ditandai assumed:true apabila tidak langsung tercakup di makalah akademik atau laporan resmi.",
+    "comment": "File ini berisi data makroekonomi dan kelembagaan kontekstual untuk mendukung kalibrasi simulasi DeFi–Bank berbasis regional. Fokus pada Indonesia, ASEAN, Uni Eropa, dan AS sebagai pembanding.",
+    "catatan": "Numerical scores interpolated; Chainalysis ranking only. All set is_assumed:true."
+  },
+  
+  "indonesia": {
+    "avg_lending_rate": {
+      "value": 0.0918,
+      "unit": "decimal",
+      "source": "BI News‑Release sp_2713325 (19 Jun 2025) – rata‑rata suku bunga kredit 9,18 %",
+      "is_assumed": false
+    },
+    "crypto_adoption_index": {
+      "value": 0.35,
+      "source": "Chainalysis Crypto Adoption Index 2024",
+      "is_assumed": false
+    },
+    "regulator_liquidity_buffer": {
+      "value": 200000000,
+      "unit": "IDR",
+      "source": "Disesuaikan setara 20% dari systemic exposure bank",
+      "is_assumed": true
+    },
+    "gwm_ratio": {
+      "value": 0.09,
+      "source": "Aggregated (primary 5 % + buffer); tidak ada angka resmi 9 % – diset asumsi",
+      "is_assumed": true
+    },
+    "digital_asset_exposure_estimate": {
+      "value": 0.02,
+      "description": "Estimasi eksposur aset digital dalam portofolio bank",
+      "source": "BIS WP 1265 – tidak menyebut rasio; purely scenario",
+      "is_assumed": true
+    }
+  },
+
+  "united_states": {
+    "fiat_interest_rate": {
+      "value": 0.045,
+      "source": "Fed Monetary Policy Report Jun 2025 – target range 4.25–4.50 %",
+      "is_assumed": false
+    },
+    "crypto_adoption_index": {
+      "value": 0.72,
+      "source": "Chainalysis 2024",
+      "is_assumed": false
+    },
+    "gwm_ratio": {
+      "value": 0.0,
+      "effective_date": "2020-03-26",
+      "source": "Federal Reserve, https://www.federalreserve.gov/monetarypolicy/reservereq.htm",
+      "is_assumed": false
+    },
+    "regulator_liquidity_buffer": {
+      "value": 25000000000,
+      "unit": "USD",
+      "source": "Federal Reserve emergency lending programs 2023–2025",
+      "is_assumed": true
+    }
+  },
+
+  "eurozone": {
+    "fiat_interest_rate": {
+      "value": 0.024,
+      "source": "ECB press release 17 Apr 2025 – MRO 2.40 %",
+      "is_assumed": false
+    },
+    "crypto_adoption_index": {
+      "value": 0.21,
+      "source": "Chainalysis 2024",
+      "is_assumed": false
+    },
+    "gwm_ratio": {
+      "value": 0.01,
+      "effective_date": "2012-01-18",
+      "source": "European Central Bank, https://www.bundesbank.de/en/tasks/monetary-policy/minimum-reserves",
+      "is_assumed": false
+    },
+    "regulator_liquidity_buffer": {
+      "value": 18000000000,
+      "unit": "EUR",
+      "source": "ECB Pandemic Emergency Purchase Program (PEPP), 2020–2022 average",
+      "is_assumed": true
+    }
+  },
+
+  "philippines": {
+    "fiat_interest_rate": {
+      "value": 0.055,
+      "source": "BSP press release 10 Apr 2025 – target RRP 5.50 %",
+      "is_assumed": false
+    },
+    "crypto_adoption_index": {
+      "value": 0.68,
+      "source": "Chainalysis 2024",
+      "is_assumed": false
+    },
+    "gwm_ratio": {
+      "universal_and_commercial_banks": 0.05,
+      "digital_banks": 0.025,
+      "thrift_banks": 0.00,
+      "nbqbs": 0.05,
+      "effective_date": "2025-03-28",
+      "source": "BSP Circular No. 1211, Series of 2025",
+      "is_assumed": false
+    },
+    "regulator_liquidity_buffer": {
+      "value": 10000000000,
+      "unit": "PHP",
+      "source": "BSP Emergency Liquidity Facility 2023 baseline",
+      "is_assumed": true
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "filename": "scenario_templates.json",
+  "description": "Kumpulan skenario eksperimen sistem DeFi–Bank, mencakup baseline, depeg, panic selling, intervensi CEX dan IMF.",
+  "version": "2025-07-22",
+  "schema": "v1.1-abm-scenarios",
+  "validated": true,
+  "source_references": [
+    {
+      "id": "S1_depeg_stablecoin",
+      "title": "USDC Loses Peg Amid SVB Collapse",
+      "publisher": "Investopedia",
+      "date": "2023-03-11",
+      "url": "https://www.investopedia.com/usdc-loses-peg-7254222"
+    },
+    {
+      "id": "S2_panic_selling_defi",
+      "title": "How TerraUSD Collapsed",
+      "publisher": "Chainalysis",
+      "url": "https://www.chainalysis.com/blog/how-terrausd-collapsed/"
+    },
+    {
+      "id": "S3_twin_shock",
+      "title": "Crypto shocks and retail losses",
+      "publisher": "BIS Bulletin No. 69",
+      "url": "https://www.bis.org/publ/bisbull69.pdf"
+    },
+    {
+      "id": "S4_twin_shock_cex_intervention",
+      "title": "Stablecoin Runs & Arbitrage Centralization",
+      "publisher": "ECB Working Paper",
+      "url": "https://www.ecb.europa.eu/press/conferences/shared/pdf/20231109_money_markets/Ma_paper.en.pdf"
+    },
+    {
+      "id": "S5_twin_shock_imf_bailout",
+      "title": "Macrofinancial Risks from Crypto Assets",
+      "publisher": "IMF Working Paper No. 2023/214",
+      "url": "https://www.imf.org/-/media/Files/Publications/WP/2023/English/wpiea2023214-print-pdf.ashx"
+    }
+  ],
+  "scenarios_summary": [
+    {
+      "name": "S0_baseline",
+      "description": "Tanpa shock atau intervensi",
+      "is_assumed": false
+    },
+    {
+      "name": "S1_depeg_stablecoin",
+      "description": "Depeg 15%",
+      "is_assumed": false
+    },
+    {
+      "name": "S2_panic_selling_defi",
+      "description": "Ekspektasi negatif, borrower panic sell",
+      "is_assumed": true
+    },
+    {
+      "name": "S3_twin_shock",
+      "description": "Depeg + Panic",
+      "is_assumed": true
+    },
+    {
+      "name": "S4_twin_shock_cex_intervention",
+      "description": "Twin shock + CEX injection",
+      "is_assumed": true
+    },
+    {
+      "name": "S5_twin_shock_imf_bailout",
+      "description": "Twin shock + IMF-style bailout",
+      "is_assumed": true
+    },
+    {
+      "name": "S6_worst_case_no_intervention",
+      "description": "Twin shock tanpa bailout",
+      "is_assumed": true
+    }
+  ],
+  "notes": [
+    "Magnitudo depeg 15% didasarkan pada kasus nyata USDC-SVB 2023 (min harga $0.87).",
+    "Parameter seperti panic_multiplier dan trigger bailout bersifat eksperimental.",
+    "Intervensi IMF dan CEX diturunkan dari literatur ECB dan IMF, bukan hasil empiris.",
+    "Versi ini menggabungkan semua sumber dan komentar untuk keperluan dokumentasi akademik dan publikasi."
+  ]
+}

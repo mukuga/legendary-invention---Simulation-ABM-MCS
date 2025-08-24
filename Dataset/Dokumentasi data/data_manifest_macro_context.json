@@ -1,0 +1,56 @@
+{
+  "BI_Rilis_SukuBungaKredit_Mei2025.pdf": {
+    "title": "Rerata Suku Bunga Kredit – Mei 2025",
+    "source_url": "https://www.bi.go.id/id/publikasi/ruang-media/news-release/Pages/sp_2713325.aspx",
+    "description": "Menampilkan rata-rata suku bunga kredit nasional Indonesia (9,18%). Digunakan sebagai nilai parameter lending_rate dalam simulasi Indonesia.",
+    "relevance": "indonesia.avg_lending_rate"
+  },
+  "BI_Indikator_BI_Rate_Historis.pdf": {
+    "title": "Riwayat BI-Rate – Bank Indonesia",
+    "source_url": "https://www.bi.go.id/id/statistik/indikator/bi-rate.aspx",
+    "description": "Digunakan sebagai acuan pembanding untuk membedakan BI Rate dengan rata-rata suku bunga kredit. Mendukung interpretasi parameter.",
+    "relevance": "indonesia.avg_lending_rate (konteks interpretatif)"
+  },
+  "Fed_Monetary_Policy_Report_Jun2025.pdf": {
+    "title": "Federal Reserve Monetary Policy Report – June 2025",
+    "source_url": "https://www.federalreserve.gov/monetarypolicy/files/20250620_mprfullreport.pdf",
+    "description": "Menjelaskan target suku bunga Fed pada kisaran 4.25%–4.50% pada pertengahan 2025. Digunakan sebagai fiat_interest_rate untuk AS.",
+    "relevance": "united_states.fiat_interest_rate"
+  },
+  "Fed_Reserve_Requirement_Page.pdf": {
+    "title": "Reserve Requirements – Federal Reserve",
+    "source_url": "https://www.federalreserve.gov/monetarypolicy/reservereq.htm",
+    "description": "Sumber resmi yang menyatakan reserve requirement ratio (RRR) ditetapkan 0% sejak 26 Maret 2020 dan tetap berlaku hingga 2025.",
+    "relevance": "united_states.gwm_ratio"
+  },
+  "ECB_Rate_Cut_PressRelease_17Apr2025.pdf": {
+    "title": "ECB Press Release – Policy Rate Cut, April 2025",
+    "source_url": "https://www.ecb.europa.eu/press/pr/date/2025/html/ecb.mp250417~42727d0735.en.html",
+    "description": "Menetapkan refinancing rate ECB menjadi 2.40%. Digunakan sebagai fiat_interest_rate untuk zona Euro.",
+    "relevance": "eurozone.fiat_interest_rate"
+  },
+  "Bundesbank_Minimum_Reserves_Info.pdf": {
+    "title": "Minimum Reserves – Deutsche Bundesbank",
+    "source_url": "https://www.bundesbank.de/en/tasks/monetary-policy/minimum-reserves/minimum-reserves-625912",
+    "description": "Menjelaskan bahwa reserve requirement zona euro adalah 1% (sejak 2012). Digunakan untuk parameter gwm_ratio Eurozone.",
+    "relevance": "eurozone.gwm_ratio"
+  },
+  "BSP_Monetary_Policy_Release_10Apr2025.pdf": {
+    "title": "BSP Press Release – Policy Rate 5.50%",
+    "source_url": "https://www.bsp.gov.ph/SitePages/MediaAndResearch/MediaDisp.aspx?ItemId=7490",
+    "description": "Menetapkan reverse repo rate BSP sebesar 5.50% per April 2025. Digunakan sebagai fiat_interest_rate Filipina.",
+    "relevance": "philippines.fiat_interest_rate"
+  },
+  "BSP_Circular_1211_ReserveRatios_2025.pdf": {
+    "title": "BSP Circular No. 1211 – Reserve Ratios for Banks",
+    "source_url": "https://www.bsp.gov.ph/Regulations/Issuances/2025/1211.pdf",
+    "description": "Menetapkan GWM berbagai jenis bank di Filipina (universal, digital, thrift, dsb). Digunakan sebagai gwm_ratio dalam simulasi.",
+    "relevance": "philippines.gwm_ratio"
+  },
+  "Chainalysis_Crypto_Adoption_Index_2024_Blog.pdf": {
+    "title": "Chainalysis Blog – 2024 Global Crypto Adoption Index (Ranking)",
+    "source_url": "https://www.chainalysis.com/blog/2024-global-crypto-adoption-index/",
+    "description": "Satu-satunya sumber publik yang menyebut peringkat adopsi kripto global. Nilai numerik interpolatif. Digunakan untuk crypto_adoption_index.",
+    "relevance": "indonesia.crypto_adoption_index, united_states.crypto_adoption_index, eurozone.crypto_adoption_index, philippines.crypto_adoption_index"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "Chainalysis_TerraUSD_Collapse_Blog.pdf": {
+    "title": "How TerraUSD Collapsed – Chainalysis Blog (2022)",
+    "source_url": "https://www.chainalysis.com/blog/how-terrausd-collapsed/",
+    "description": "Memberikan gambaran perilaku investor selama depeg UST (Mei 2022). Digunakan sebagai dasar konseptual untuk bentuk distribusi panic selling probability.",
+    "relevance": "stochastic_parameters.panic_selling_probability"
+  },
+  "Chainalysis_Stablecoin_Security_Risks_2023.pdf": {
+    "title": "Stablecoin Security Risks and Arbitrage – Chainalysis Blog",
+    "source_url": "https://www.chainalysis.com/blog/stablecoin-security-risks/",
+    "description": "Menganalisis stabilitas harga stablecoin dan reaksi pasar terhadap deviasi kecil. Digunakan untuk mendukung parameterisasi shock & arbitrage frequency.",
+    "relevance": "stochastic_parameters.stablecoin_jump_frequency"
+  },
+  "BIS_Bulletin69_Crypto_Shocks.pdf": {
+    "title": "Crypto Shocks and Retail Losses: Evidence from TerraUSD",
+    "source_url": "https://www.bis.org/publ/bisbull69.pdf",
+    "description": "Memberikan data empiris untuk drawdown USDC selama SVB depeg (maks. 13%). Digunakan untuk mengkalibrasi nilai tengah dan max dalam triangular distribution.",
+    "relevance": "stochastic_parameters.shock_injection_magnitude"
+  },
+  "Fed_FEDS_WorkingPaper_2023_044_TerraRipple.pdf": {
+    "title": "Ripple Effects from the Terra Collapse – FEDS WP No. 2023-044",
+    "source_url": "https://www.federalreserve.gov/econres/feds/files/2023044pap.pdf",
+    "description": "Mengkaji dampak sistemik dari Terra crash ke stablecoin lain. Mendukung perumusan struktur ketergantungan shock dalam model.",
+    "relevance": "cross-reference; general crisis context"
+  },
+  "CoinMetrics_CandleData_Reference.pdf": {
+    "title": "CoinMetrics Market Data Reference – Candle & Jump Metrics",
+    "source_url": "https://gitbook-docs.coinmetrics.io/market-data/market-data-overview/candles",
+    "description": "Digunakan untuk mengestimasi frekuensi jump harga stablecoin (3–5 lompatan >5% per tahun).",
+    "relevance": "stochastic_parameters.stablecoin_jump_frequency"
+  }
+}

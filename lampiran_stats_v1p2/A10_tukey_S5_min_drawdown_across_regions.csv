@@ -1,0 +1,4 @@
+group1,group2,meandiff,p-adj,lower,upper,reject
+EUROZONE,INDONESIA,0.0,0.0,0.0,0.0,True
+EUROZONE,UNITED_STATES,-0.0,0.342,-0.0,0.0,False
+INDONESIA,UNITED_STATES,-0.0,0.0,-0.0,-0.0,True

@@ -1,0 +1,75 @@
+{
+  "comment": "Metadata dan dokumentasi utama untuk konfigurasi simulasi integrasi DeFi–Bank menggunakan ABM dan Monte Carlo. Termasuk informasi versi, lisensi, sumber data, asumsi, serta struktur file konfigurasi yang dapat direproduksi untuk publikasi akademik.",
+
+  "project": {
+    "title": "Simulasi Integrasi DeFi dan Stablecoin terhadap Stabilitas Sistem Perbankan",
+    "short_title": "DeFiBank Sim ABM-MCS",
+    "author": "Muhammad Kurniawan Gaus",
+    "institution": "Universitas Khairun",
+    "version": "1.1.0",
+    "date_created": "2025-07-21",
+    "last_updated": "2025-07-22",
+    "language": "Python 3.11 + Mesa 2.3.2"
+  },
+
+  "model_specification": {
+    "abm_framework": "Mesa",
+    "integration": "Monte Carlo Simulation",
+    "time_step_unit": "1 step = 1 hari simulasi",
+    "agents": ["Bank", "Borrower", "Arbitrageur", "CEX", "Regulator"],
+    "core_dynamics": [
+      "Stablecoin GBM + Jump-Diffusion",
+      "Default cascade",
+      "Panic selling behavior",
+      "Liquidity shock & bailout"
+    ]
+  },
+
+  "data_sources": {
+    "empirical_sources": [
+      "Bank Indonesia, OJK, LPS",
+      "Chainalysis Crypto Adoption Index 2024",
+      "BIS Bulletins No. 69, No. 108, No. 1265",
+      "CoinMetrics, Kaiko Research",
+      "Federal Reserve & ECB Policy Reports",
+      "IMF Working Paper No. 2023/214",
+      "Investopedia – USDC Peg 2023"
+    ],
+    "simulation_sources": [
+      "Poledna et al. (2015)",
+      "Axtell & Farmer (2022)",
+      "Cong et al. (2025)",
+      "Liu et al. (2016)"
+    ],
+    "data_note": "Setiap parameter disertai status 'is_assumed'. Data diseleksi secara konservatif dengan acuan empiris jika tersedia."
+  },
+
+  "citation_style": {
+    "format": "APA 7th Edition",
+    "preferred_reference_export": "BibTeX",
+    "bibliography_location": "See: /docs/bibliography.bib or Daftar Pustaka pada Tugas Akhir Bab 5"
+  },
+
+  "reproducibility": {
+    "random_seed_controlled": true,
+    "config_files": [
+      "agent_parameters.json",
+      "stablecoin_market.json",
+      "macro_context.json",
+      "monte_carlo_config.json",
+      "scenario_templates.json"
+    ],
+    "output_format": ["CSV", "PNG (visuals)", "JSON"],
+    "visualization_tools": ["matplotlib", "seaborn", "pandas"],
+    "code_repository": {
+      "type": "local",
+      "path": "./simulation/",
+      "version_control": "git (local-only)"
+    }
+  },
+
+  "license": {
+    "type": "CC-BY-NC 4.0",
+    "note": "Hanya untuk keperluan akademik dan non-komersial. Silakan kutip jika menggunakan bagian dari model ini."
+  }
+}

@@ -1,0 +1,23 @@
+python_version >= 3.11
+mesa==2.3.4
+numpy>=1.23
+pandas>=1.5
+scipy>=1.9
+statsmodels>=0.14
+matplotlib>=3.6
+seaborn>=0.12
+pyyaml>=6.0
+tqdm>=4.64
+# Optional for Games–Howell post-hoc:
+pingouin>=0.5
+# or: scikit-posthocs>=0.7
+
+
+# first make a venv  | = = = = = = = >  python -m venv venv 
+
+# make sure venv is available  | = = >  Get-ChildItem .\venv\Scripts\
+
+# then activate  | = = = = = = = = = >  .\venv\Scripts\Activate.ps1
+
+
+

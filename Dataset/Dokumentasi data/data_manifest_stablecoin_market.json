@@ -1,0 +1,32 @@
+{
+  "Kaiko_DefiningDepegs_2023.pdf": {
+    "title": "Defining Depegs: A New Metric for Stablecoin Stability",
+    "source_url": "https://research.kaiko.com/insights/defining-depegs-a-new-metric-for-stablecoin-stability",
+    "description": "Digunakan untuk mengkalibrasi profil volatilitas DAI dan USDC serta memahami frekuensi deviasi nilai tukar (spread/jump).",
+    "relevance": "volatility_profile.DAI, volatility_profile.USDC"
+  },
+  "BIS_Bulletin69_Crypto_Shocks.pdf": {
+    "title": "Crypto Shocks and Retail Losses: Evidence from TerraUSD Collapse",
+    "source_url": "https://www.bis.org/publ/bisbull69.pdf",
+    "description": "Sumber utama untuk dokumentasi keruntuhan TerraUSD (UST), termasuk harga minimum dan total kerugian USD. Juga digunakan untuk jump calibration USDC.",
+    "relevance": "depeg_history, volatility_profile.USDC"
+  },
+  "BIS_WP_1164_Stablecoin_PublicInfo.pdf": {
+    "title": "The Role of Public Information in Preventing Stablecoin Runs",
+    "source_url": "https://www.bis.org/publ/work1164.pdf",
+    "description": "Digunakan untuk memperkuat konteks depeg USDC selama krisis SVB dan pemulihan pasca-intervensi, serta validasi price-jump modelling.",
+    "relevance": "depeg_history[1], volatility_profile.USDC"
+  },
+  "ECB_WP_Stablecoin_Arbitrage_2023.pdf": {
+    "title": "Stablecoin Runs and the Centralization of Arbitrage (ECB WP)",
+    "source_url": "https://www.ecb.europa.eu/press/conferences/shared/pdf/20231109_money_markets/Ma_paper.en.pdf",
+    "description": "Digunakan untuk parameterisasi efisiensi arbitrase stablecoin (USDC, USDT), termasuk jumlah pelaku pasar, deviasi harga rata-rata, dan dominasi pelaku tunggal.",
+    "relevance": "arbitrage_efficiency, volatility_profile.USDT"
+  },
+  "Kaiko_StablecoinLiquidity_2023.pdf": {
+    "title": "Stablecoin Liquidity: Diving into the Data",
+    "source_url": "https://research.kaiko.com/insights/stablecoin-liquidity-diving-into-the-data",
+    "description": "Referensi pendukung untuk interpolasi parameter DAI (jumlah arbitrase dan deviasi harga). Karena tidak ada data langsung, digunakan sebagai basis pendekatan.",
+    "relevance": "arbitrage_efficiency.DAI"
+  }
+}

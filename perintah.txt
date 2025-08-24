@@ -1,0 +1,13 @@
+uji ANOVA:
+
+python run_stats_v1p2.py --results_dir "C:\path\to\results" --out_dir "C:\path\to\out" --repeg_from first_breach --window 12 --threshold 0.99
+
+python run_stats_v1p1.py --results_dir "C:\path\to\results" --out_dir "C:\path\to\out" --repeg_from first_breach --window 12 --threshold 0.99
+
+python run_stats.py --results_dir "C:\path\to\results" --out_dir "C:\path\to\out" --window 12 --threshold 0.99 
+
+
+
+
+powershell -ExecutionPolicy Bypass -File .\run-all.ps1  --->  Salin ke terminal untuk menjalankan full skenario simulasi
+
