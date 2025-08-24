@@ -98,9 +98,9 @@ Menghasilkan output analisis **ANOVA** dan uji **post-hoc**.
 
 Contoh hasil visualisasi:
 
-![Contoh Grafik Hasil Simulasi - stablecoin_price_timeseries](figures/indonesia/S0_baseline/stablecoin_price_timeseries.png)
-![Contoh Grafik Hasil Simulasi - final_price_distribution](figures/indonesia/S0_baseline/final_price_distribution.png)
-![Contoh Grafik Hasil Simulasi - final_liquidity_boxplot](figures/indonesia/S0_baseline/final_liquidity_boxplot.png)
+![Contoh Grafik Hasil Simulasi - stablecoin_price_timeseries]([figures/indonesia/S0_baseline/stablecoin_price_timeseries.png](https://github.com/mukuga/legendary-invention---Simulation-ABM-MCS/blob/result/figures/indonesia/S0_baseline/stablecoin_price_timeseries.png))
+![Contoh Grafik Hasil Simulasi - final_price_distribution]([figures/indonesia/S0_baseline/final_price_distribution.png](https://github.com/mukuga/legendary-invention---Simulation-ABM-MCS/blob/result/figures/indonesia/S0_baseline/final_price_distribution.png))
+![Contoh Grafik Hasil Simulasi - final_liquidity_boxplot]([figures/indonesia/S0_baseline/final_liquidity_boxplot.png](https://github.com/mukuga/legendary-invention---Simulation-ABM-MCS/blob/result/figures/indonesia/S0_baseline/final_liquidity_boxplot.png))
 
 ---
 
