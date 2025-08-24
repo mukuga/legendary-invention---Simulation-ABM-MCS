@@ -1,4 +1,0 @@
-group1,group2,meandiff,p-adj,lower,upper,reject,coin
-EUROZONE,INDONESIA,0.0,0.0,0.0,0.0,True,USDC
-EUROZONE,UNITED_STATES,-0.0,0.342,-0.0,0.0,False,USDC
-INDONESIA,UNITED_STATES,-0.0,0.0,-0.0,-0.0,True,USDC
