@@ -24,12 +24,20 @@ Repositori ini memiliki dua branch utama:
 ## 📂 Struktur Proyek
 ```
 project/
+├── Dataset/ 
+├── results/              # hasil simulasi
+├── figures/              # hasil visualisasi
+├── lampiran_stats_v1p2/  # hasil uji ANOVA
+├── agents.py             
+├── config.py
+├── market.py
+├── model.py
+├── scenarios.py
+├── param_loader_2.py     # Membuat config
 ├── run.py                # Menjalankan simulasi utama
-├── visualize.py          # Membuat visualisasi hasil simulasi
+├── run-all.ps1           # PowerShell versi penuh - untuk jalankan semua sesi: region × skenario
+├── Visualisasi.py        # Membuat visualisasi hasil simulasi
 ├── run_stats_v1p2.py     # Analisis statistik hasil simulasi (ANOVA)
-├── configs/              # Parameter konfigurasi
-├── results/              # Hasil output simulasi (.csv, .png)
-└── agents/, model/, ...  # Modul inti simulasi
 ```
 
 ---
